@@ -4,6 +4,7 @@ Specialized content management system for landing page<br/>
 
 
 Install
-
+~~~~
 npm install
 node index
+~~~~
