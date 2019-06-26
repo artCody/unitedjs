@@ -1,0 +1,35 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/seo.css">
+{{/section}}
+<h2>SEO</h2>
+<div class="panel">
+	<ul>
+		<li id="saveCard" class="upgrade">{{local.seo.buttonSave}}</li>
+	</ul>
+</div>
+
+<form id="seo-form">
+	<div class="form-group">
+		<label for="title" class="description">{{local.seo.titlePage}}</label>
+		<input type="text" class="login_input" placeholder="{{local.seo.titlePlaceholder}}" id="title" autocomplete="off" value='{{items.seo.title}}'>
+	</div>
+	<div class="form-group-keywords">
+		<label for="newKeyword" class="description">{{local.seo.metaKeywords}}</label>
+		<div class="keywords">
+			{{#each items.seo.keywords}}
+				<span class='keyword'>{{this}}</span>
+			{{/each}}
+		</div>
+		<div class='panel-addKeyword'>
+			<input type="text" class="login_input" placeholder="{{local.seo.metaKeywordsPlaceholder}}" id="newKeyword">
+			<button class='addKeyword' id='addKeyword'>{{local.seo.metaKeywordsButton}}</button>
+		</div>
+		<div class="form-group-textarea">
+			<label for="">{{local.seo.MetaDescription}}</label>
+			<textarea name="extratext" id="textarea" cols="30" rows="5" class="text">{{items.seo.description}}</textarea>
+		</div>
+	</div>
+</form>
+{{#section 'jquery'}}
+	<script src="js/seo.js"></script>
+{{/section}}

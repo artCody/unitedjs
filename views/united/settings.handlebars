@@ -1,0 +1,81 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="/css/settings.css">
+{{/section}}
+
+<h2>{{local.settings.title}}</h2>
+<ul class="tab-pannel">
+	<li rel="panel1" {{#if (eq link 'temp') }} class="tab-active" {{/if}}>{{local.settings.tabs.templates}}</li>
+	<li rel="panel2" {{#if (eq link 'secr') }} class="tab-active" {{/if}}>{{local.settings.tabs.security}}</li>
+	<li rel="panel3" {{#if (eq link 'lang') }} class="tab-active" {{/if}}>{{local.settings.tabs.languages}}</li>
+</ul>
+
+
+<div id="panels">
+	<div class="panel {{#if (eq link 'temp') }} active {{/if}}" id="panel1">
+		<p>{{local.settings.templates.selectTemplates}}</p>
+		<div class="templates">
+			<div class="template" id="standard">
+				<img src="/img/icon-layout1.png" alt="Standard" class="">
+				<span>Standard</span>
+			</div>
+			<div class="template" id="vend">
+				<img src="/img/default.png" alt="Vend" class="">
+				<span>Vend</span>
+			</div>
+			<div class="not-active" id="soon">
+				<img src="/img/default.png" alt="Standard" class="">
+				<span>Soon</span>
+			</div>
+		</div>
+		<div class="btn-edit"><a href="/template">{{local.settings.templates.button}}</a></div>
+	</div>
+
+	<div class="panel {{#if (eq link 'secr') }} active {{/if}}" id="panel2">
+		<p>{{local.settings.security.title}}</p>
+		<form id="security">
+			<div class="form-group">
+				<label for="type" class="description">{{local.settings.security.username}}</label>
+				<input type="text" name="username" class="login_input" value="{{user.username}}" id="type">
+			</div>
+			<div class="form-group">
+				<label for="type" class="description">email</label>
+				<input type="text" name="email" class="login_input" value="{{user.email}}">
+			</div>
+			<div class="betwixt"></div>
+			<div class="form-group">
+				<label for="type" class="description">{{local.settings.security.newpassword}}</label>
+				<input type="password" name="newpassword" placeholder="{{local.settings.security.newpasswordPlaceholder}}">
+			</div>
+			<div class="form-group">
+				<label for="type" class="description">{{local.settings.security.confrimpassword}}</label>
+				<input type="password" name="confpassword" placeholder="{{local.settings.security.confrimpasswordPlaceholder}}">
+			</div>
+			<div class="form-group">
+				<button type="submit" class="btn_login">{{local.settings.security.button}}</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="panel {{#if (eq link 'lang') }} active {{/if}}" id="panel3">
+		<p>{{local.settings.languages.selectLanguage}}</p>
+		<div class="templates">
+			<div class="lang" id='rus'>
+				<img src="/img/lang/rus.png" alt="Standard" class="">
+				<span>Русский</span>
+			</div>
+			<div class="lang" id='eng'>
+				<img src="/img/lang/eng.png" alt="Vend" class="">
+				<span>English</span>
+			</div>
+			<div class="lang" id='chn'>
+				<img src="/img/lang/chn.png" alt="Standard" class="">
+				<span>中文</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{{#section 'jquery'}}
+	<script src="/js/settings.js"></script>
+{{/section}}

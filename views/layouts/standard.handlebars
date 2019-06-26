@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{settings.seo.title}}</title>
+	<link rel="stylesheet" href="/css/main/style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta name="description" content='{{settings.seo.description}}'>
+	<meta name="keywords" content="{{settings.seo.keywords}}">
+</head>
+<body style="font-family: '{{settings.font}}', sans-serif;">
+<header class="main-header">
+	<div class="bg-header" style="background-image: url({{settings.back}});">
+		{{#if (eq settings.bgOverlay.overlay true) }}
+			<div class="header-overlay" style="background: linear-gradient( {{settings.bgOverlay.angle}}deg, {{settings.bgOverlay.firstColor}} {{settings.bgOverlay.rangeColorFirst}}, {{settings.bgOverlay.secondColor}} {{settings.bgOverlay.rangeColorSecond}}); opacity: {{settings.bgOverlay.opacity}};"></div>
+		{{/if}}
+		<div class="container">
+			<div class="top-header">
+				{{#if (eq settings.title '') }}
+					<img src="{{settings.logo}}" alt="" class="logo">
+					{{else}}
+					<div class="title">{{settings.title}}</div>
+				{{/if}}
+				<div class="top-header-right">
+					<nav class="main-nav" id="nav">
+						<ul>
+							{{#each items}} 
+								<li><a href="#{{this._id}}">{{this.title}}</a></li>
+							{{/each}}
+{{!-- 							<li><a href="#designer">designer</a></li>
+							<li><a href="#">social</a></li>
+							<li><a href="#about">about</a></li>
+							<li><a href="#characters">characters</a></li> --}}
+						</ul>
+					</nav>
+					<div class="phone"><i class="fas fa-mobile"></i>{{settings.phone}}</div>
+				</div>
+			</div>
+			<div class="main-text">
+				<div class="font">{{settings.extratext}}</div>
+				<h1>{{settings.maintext}}</h1>
+				{{#if (eq settings.file '') }}
+					<div class="btn"><a href="#">Download</a></div>
+					{{else}}
+					<div class="btn"><a href="{{settings.file}}" download>Download</a></div>
+				{{/if}}
+			</div>
+		</div>
+	</div>
+</header>
+<div class="sections">
+	
+	{{{body}}}
+</div>
+<footer class="main-footer">
+	<div class="bg-footer">
+		{{!-- <div class="line-footer"></div> --}}
+		<div class="inner-footer">
+			<span class="text-social">contact me</span>
+			<ul class="social">
+				<li><a href="{{settings.twitter}}"><img src="/img/twitter.png" alt=""></a></li>
+				<li><a href="{{settings.instagram}}"><img src="/img/instagram.png" alt=""></a></li>
+				<li><a href="{{settings.telegram}}"><img src="/img/youtube.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="footer-bottom">
+			<p>© {{settings.copyright}}. All rights reserved.</p>
+		</div>
+	</div>
+</footer>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/js/united.js"></script>
+</body>
+</html>

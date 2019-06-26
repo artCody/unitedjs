@@ -1,0 +1,55 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/sections.css">
+{{/section}}
+<h2>{{local.sections.title}}</h2>
+<div class="loader"></div>
+<table cellspacing="0" cellpadding="0" id="sections">
+	<thead>
+		<tr>
+			<th class="id"></th>
+			<th class="row">{{local.sections.table.position}}</th>
+			<th class="row">{{local.sections.table.type}}</th>
+			<th class="row">{{local.sections.table.name}}</th>
+			<th class="row">{{local.sections.table.image}}</th>
+			<th class="row st">{{local.sections.table.description}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each items}}
+		<tr onclick="window.location='/edit/{{this.type}}/{{this._id}}';" class="block__section">
+			<td class="id"></td>
+			<td class="position">{{this.position}}</td>
+			<td class="type">
+				{{#if (eq this.type 'Classic') }}
+					<img src="img/classic-card.png" alt="">
+				{{/if}}
+				{{#if (eq this.type 'Person') }}
+					<img src="img/person-card.png" alt="">
+				{{/if}}
+				{{#if (eq this.type 'Wide') }}
+					<img src="img/wide-card.png" alt="">
+				{{/if}}
+				{{#if (eq this.type 'Features') }}
+					<img src="img/feature-card.png" alt="">
+				{{/if}}
+				{{#if (eq this.type 'Sandbox') }}
+					<img src="img/sandbox-card.png" alt="">
+				{{/if}}
+			</td>
+			<td class="name">{{this.type}}</td>
+			<td class="img">
+				{{#if (eq this.type 'Sandbox') }}
+					<img src="img/img.png" alt="">
+				{{else}}
+					<img src="{{this.img}}" alt="img">
+				{{/if}}
+				
+			</td>
+			<td class="shot-text"><p>{{this.previewtext}}</p></td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+{{#section 'jquery'}}
+	<script src="/js/sections.js"></script>
+{{/section}}

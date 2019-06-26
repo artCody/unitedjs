@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Unitedjs</title>
+
+
+	<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="/css/united/style.css">
+
+
+	{{{_sections.head}}}
+</head>
+<body >
+	<div class="wrapper"></div>
+	<div class="alert-msg" id="alert-msg">{{msg}}</div>
+	<div class="container">
+
+		<div class="main" id='main'>
+			<nav>
+				<div class="btn"><a href="/choose">{{ local.nav.create }}</a></div>
+				<ul class='navigation'>
+					<li class='item'><a href="/dashboard" class='{{#if active.dashboard}}nav-active{{/if}}'>{{ local.nav.dashboard }}</a></li>
+					<li class='item'><a href="/sections" class='{{#if active.sections}}nav-active{{/if}}'>{{ local.nav.sections }}</a></li>
+					<li class='item'><a href="/template" class='{{#if active.template}}nav-active{{/if}}'>{{ local.nav.template }}</a></li>
+					<li class='item'><a href="/followers" class='{{#if active.followers}}nav-active{{/if}}'>{{ local.nav.followers }}</a></li>
+					<li class='item'><a href="/seo" class='{{#if active.seo}}nav-active{{/if}}'>{{ local.nav.seo }}</a></li>
+					<li class='item'><a href="/settings/temp" class='{{#if active.settings}}nav-active{{/if}}'>{{ local.nav.settings }}</a></li>
+					<li class="logout">
+						<a href="/" target="_blank"><i class="fas fa-file-alt"></i></a>
+						<a href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+					</li>
+
+				</ul>
+			</nav>
+			<main id='target'>
+				
+				{{{body}}}
+			</main>
+		</div>
+
+	</div>
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/detect.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+{{{_sections.jquery}}}
+</body>
+</html>

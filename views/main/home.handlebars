@@ -1,0 +1,62 @@
+{{#each items}}
+
+{{#if (eq this.type 'Classic') }}
+
+<div class="section-container" style="max-width:{{this.size}}px;"  id="{{this._id}}">
+	<div class="inner-section" id="about">
+		<img src="/{{this.img}}" alt="" class="preview-img" id="preview-img">
+		<span class="preview-title" id="previewTitle">{{this.title}}</span>
+		<p class="preview-text" id="previewText">{{this.textarea}}</p>
+	</div>
+</div>
+
+
+{{/if}}
+
+{{#if (eq this.type 'Person') }}
+
+<div class="section-container" id="designer" style="max-width:{{this.size}}px;" id="{{this._id}}">
+	<div class="inner-section">
+	<img src="/{{this.img}}" alt="" class="preview-img-circle" id="preview-img">
+	<span class="preview-title" id="previewTitle">{{this.title}}</span>
+	<span class="preview-extra" id="previewExtra">{{this.extra}}</span>
+	<p class="preview-text" id="previewText">{{this.textarea}}</p>
+	</div>
+</div>
+
+{{/if}}
+
+{{#if (eq this.type 'Wide') }}
+<div class="preview-wide" id="characters" id="{{this._id}}">
+<div class="preview-back-wide" id="previewBack" style="background-image: url(/{{this.img}});"></div>
+	<span class="preview-title-wide" id="previewTitle">{{this.title}}</span>
+	<p class="preview-text-wide" id="previewText">{{this.textarea}}</p>
+</div>
+{{/if}}
+
+{{#if (eq this.type 'Features') }}
+
+<div class="section-container" id="{{this._id}}">
+	<h2>Features</h2>
+	<div class="inner-section-feature">
+		{{#each this.cards}}
+			<div class="card">
+				<img src="{{this.img.path}}" alt="">
+				<span class="headline">{{this.headline}}</span>
+				<p class="area">{{this.text}}</p>
+			</div>
+		{{/each}}
+	</div>
+</div>
+{{/if}}
+
+
+{{#if (eq this.type 'Sandbox') }}
+<div class="section-container" style="max-width:{{this.size}}px;" id="{{this._id}}">
+	<div class="inner-container-align">
+		{{{this.textarea}}}
+	</div>
+</div>
+{{/if}}
+
+{{/each}}

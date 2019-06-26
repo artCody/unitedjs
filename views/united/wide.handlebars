@@ -1,0 +1,57 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/wide.css">
+{{/section}}
+<h2>Wide section</h2>
+<div class="preview">
+	<div class="preview-back" id="previewBack"></div>
+
+		<span class="preview-title" id="previewTitle">Simply dummy text</span>
+		<p class="preview-text" id="previewText">Form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence first true generator Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over  200 Latin words, combined with a handful of model sentence structures here are many variations of passages of Lorem Ipsum  available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly.</p>
+	</div>
+<div class="betwixt"></div>
+<form id="create-form">
+	<div class="form-group">
+		<span class="description">Display</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="display" id="display">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status">off</span>
+	</div>
+	<div class="form-group">
+		<label for="type" class="description">Section Type</label>
+		<input type="text" name="type" class="login_input" value="Wide" id="type" disabled>
+	</div>
+	<div class="form-group">
+		<label for="title" class="description">Section title</label>
+		<input type="text" name="title" class="login_input" placeholder="Simply dummy Text" id="title">
+	</div>
+	<div class="form-group">
+		<label for="position" class="description">Position</label>
+		<div class="form-position">
+		<input type="number" name="position" class="login_input quantity-num" value="1" id="position" readonly>
+			<div class="btn-position">
+				<span class="quantity-arrow-up"></span>
+  				<span class="quantity-arrow-down"></span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<span class="description">Image</span>
+		<div class="file-upload">
+			<label id="view-upload">
+				<input type="file" name="img" class="login_input" accept="image/*" id="img">
+			</label>
+		</div>
+	</div>
+	<div class="form-group-textarea">
+		<label for="">Text</label>
+		<textarea name="textarea" id="textarea" cols="30" rows="10" class="text"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn-save">Save</button>
+	</div>
+</form>
+{{#section 'jquery'}}
+	<script src="js/wide.js"></script>
+{{/section}}

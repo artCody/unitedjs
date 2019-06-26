@@ -1,0 +1,77 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="/css/person.css">
+{{/section}}
+
+<div class="panel">
+	<ul>
+		<li id="saveCard" class="upgrade">edit</li>
+		<li><a href="/delete/{{items._id}}" id="delete">delete</a></li>
+	</ul>
+</div>
+
+
+<div class="preview">
+	<img src="/{{items.img}}" alt="" class="preview-img" id="preview-img">
+	<span class="preview-title" id="previewTitle">{{items.title}}</span>
+	<span class="preview-extra" id="previewExtra">{{items.extra}}</span>
+	<p class="preview-text" id="previewText">{{items.textarea}}</p>
+</div>
+<div class="betwixt"></div>
+<form id="create-form">
+	<input type="hidden" name="id" value="{{items._id}}">
+	<div class="form-group size-control">
+		<div class="size-line">
+			<div class="large-line"></div>
+			<div class="medium-line"></div>
+			<div class="small-line"></div>
+		</div>
+		<input type="text" name="size" class="display-size" readonly value="{{items.size}}">
+	</div>
+	<div class="form-group">
+		<span class="description">Display</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="display" id="display" value="{{items.status}}">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status"
+		>{{items.status}}</span>
+	</div>
+	<div class="form-group">
+		<label for="type" class="description">Section Type</label>
+		<input type="text" name="type" class="login_input" value="Person" id="type" disabled>
+	</div>
+	<div class="form-group">
+		<label for="title" class="description">Section title</label>
+		<input type="text" name="title" class="login_input" placeholder="Simply dummy Text" id="title" value="{{items.title}}">
+	</div>
+	<div class="form-group">
+		<label for="extre" class="description">Extra text</label>
+		<input type="text" name="extra" class="login_input" placeholder="Extra" id="extra" value="{{items.extra}}">
+	</div>
+	<div class="form-group">
+		<label for="position" class="description">Position</label>
+		<div class="form-position">
+		<input type="number" name="position" class="login_input quantity-num" value="{{items.position}}" id="position" readonly>
+			<div class="btn-position">
+				<span class="quantity-arrow-up"></span>
+  				<span class="quantity-arrow-down"></span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<span class="description">Image</span>
+		<div class="file-upload">
+			<label id="view-upload">
+				<input type="file" name="img" class="login_input" accept="image/*" id="img">
+			</label>
+		</div>
+	</div>
+	<div class="form-group-textarea">
+		<label for="">Text</label>
+		<textarea name="textarea" id="textarea" cols="30" rows="10" class="text">{{items.textarea}}</textarea>
+	</div>
+</form>
+
+{{#section 'jquery'}}
+	<script src="/js/editJS.js"></script>
+{{/section}}

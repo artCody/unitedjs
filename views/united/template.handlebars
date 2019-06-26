@@ -1,0 +1,127 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/template.css">
+{{/section}}
+<h2>{{local.template.title}}</h2>
+<div class="panel">
+	<ul>
+		<li id="saveCard" class="upgrade">{{local.template.buttonSave}}</li>
+	</ul>
+</div>
+<form id="create-form">
+	<div class="form-group">
+		<span class="description">{{local.template.file}}</span>
+		<div class="file-upload file-name">
+			<label id="view-upload" style="" class='file-name'>
+				<input type="file" name="file" class="login_input file" id='file-input' value="{{items.file}}">
+			</label>
+		</div>
+		<div class='delete-image delete-file' data-img='file'>{{local.template.deleteFileButton}}</div>
+	</div>
+	<div class="form-group">
+		<label for="title" class="description">{{local.template.font}}</label>
+		 <div class="select-wrapper">
+			<select name="font" id="" value='{{items.font}}'>
+				<option selected disabled hidden></option>
+				<option value="Open Sans">Open Sans</option>
+				<option value="PT Sans">PT Sans</option>
+				<option value="Tahoma">Tahoma</option>
+			</select>
+			 <div class="select-arrow"></div>
+		 </div>
+	</div>
+	<div class="form-group">
+		<label for="title" class="description">{{local.template.siteTitle}}</label>
+		<input type="text" name="title" class="login_input" placeholder="{{local.template.titlePlaceholder}}" id="title" value="{{items.title}}">
+	</div>
+	<div class="form-group">
+		<span class="description">{{local.template.logotype}}</span>
+		<div class="file-upload">
+			<label id="view-upload" style="background-image: url({{items.logo}});">
+				<input type="file" name="logotype" class="login_input" accept="image/*" id="img" value="{{items.logo}}">
+			</label>
+		</div>
+		<div class='delete-image' data-img='logo'>{{local.template.deleteLogotypeButton}}</div>
+	</div>
+	<div class="form-group-textarea">
+		<label for="">{{local.template.mainText}}</label>
+		<textarea name="maintext" id="textarea" cols="30" rows="5" class="text">{{items.maintext}}</textarea>
+	</div>
+	<div class="form-group-textarea">
+		<label for="">{{local.template.extraText}}</label>
+		<textarea name="extratext" id="textarea" cols="30" rows="5" class="text">{{items.extratext}}</textarea>
+	</div>
+	<div class="form-group">
+		<span class="description">{{local.template.background}}</span>
+		<div class="file-upload bg-file-upload">
+			<label id="view-upload-back" style="background-image: url({{items.back}});">
+				<div class="header-overlay"></div>
+				<input type="file" name="back" class="login_input" accept="image/*" id="back" value="{{items.back}}">
+			</label>
+		</div>
+		<div class='delete-image' data-img='back'>{{local.template.deleteBackgroundButton}}</div>
+	</div>
+	<div class="form-group overlay">
+		<span class="description">{{local.template.overlay}}</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="overlay" id="overlay" value="{{items.bgOverlay.overlay}}">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status">off</span>
+	</div>
+
+	<div class="overlay-settings">
+		{{!-- <div class='colors'> --}}
+			<div class="color">
+				<label class="first-color">
+					<span class="description">{{local.template.firstColor}}</span>
+					<input type="color" id='firstColor' class='overlay-color' name="firstColor" value="{{items.bgOverlay.firstColor}}">
+				</label>
+				<input type="range" min="0" max="100" step="1" value='{{items.bgOverlay.colorRangeFirst}}' class="overlay-color" id='rangeColorFirst' name='colorRangeFirst'>
+			</div>
+			<div class="color">
+				<label class="second-color">
+					<span class="description">{{local.template.secondColor}}</span>
+					<input type="color" id='secondColor' class='overlay-color' name="secondColor" value="{{items.bgOverlay.secondColor}}">
+				</label>
+				<input type="range" min="0" max="100" step="1" value='{{items.bgOverlay.colorRangeSecond}}' class="overlay-color" id='rangeColorSecond' name='colorRangeSecond'>
+			</div>
+			<div class='color'>
+				<label class='angle'>
+					<span class="description">{{local.template.angle}}</span>
+					<input type="range" min="0" max="360" step="1" value='{{items.bgOverlay.angle}}' class="overlay-color" id='rangeRadius' name='angle'>
+				</label>
+			</div>
+			<div class='color'>
+				<label class='angle'>
+					<span class="description">{{local.template.opacity}}</span>
+					<input type="range" min="0.0" max="1.00" step="0.01" value='{{items.bgOverlay.opacity}}' class="overlay-color" id='rangeOpacity' name='opacity'>
+				</label>
+			</div>
+	</div>
+	<div class="form-group form-group-phone">
+		<label for="phone" class="description">{{local.template.phone}}</label>
+		<input type="text" name="phone" class="login_input" placeholder="enter phone here" id="phone" value="{{items.phone}}">
+	</div>
+	<div class="betwixt"></div>
+	<label for="position" class="description social-media">{{local.template.socialMedia}}</label>
+	<div class="form-group">
+		<label for="instagram" class="description ">Instagram</label>
+		<input type="text" name="instagram" class="login_input" placeholder="enter link here" id="instagram" value="{{items.instagram}}">
+	</div>
+	<div class="form-group">
+		<label for="twitter" class="description">Twitter</label>
+		<input type="text" name="twitter" class="login_input" placeholder="enter link here" id="twitter"
+		value="{{items.twitter}}">
+	</div>
+	<div class="form-group">
+		<label for="telegram" class="description">Telegram</label>
+		<input type="text" name="telegram" class="login_input" placeholder="enter link here" id="telegram" value="{{items.telegram}}">
+	</div>
+	<div class="form-group copyright">
+		<label for="copyright" class="description">{{local.template.copyright}}</label>
+		<input type="text" name="copyright" class="login_input" placeholder="enter your copyright here" id="copyright" value="{{items.copyright}}">
+	</div>
+</form>
+{{#section 'jquery'}}
+	<script src="js/template.js"></script>
+{{/section}}

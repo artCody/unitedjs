@@ -1,0 +1,110 @@
+{
+	"nav": {
+	  "create": "新建",
+	  "dashboard": "仪表板",
+	  "sections": "部分",
+	  "template": "模版",
+	  "followers": "订户",
+	  "seo": "SEO",
+	  "settings": "设置",
+	  "logout": "注销",
+	  "back": "转到网站"
+	},
+	"selectSection":{
+		"title": "选择一个部分"
+	},
+	"section": {
+		"classic": {
+			"title": "Classic 部分",
+			"display": "显示",
+			"type": "类型部分",
+			"sectionTitle": "部分标题",
+			"position": "页面上的位置",
+			"image": "图片",
+			"text": "文本",
+			"button": "新建"
+		}
+	},
+	"dashboard": {
+		"title": "仪表板",
+		"visits": "访客",
+		"country": "国家",
+		"activeSections": "被激活的部分",
+		"createSectionBlock": {
+			"headline": "创建您自己的部分",
+			"paragraph": "您可以添加新的部分到您的网站",
+			"button": "新建部分"
+		}
+	},
+	"sections": {
+		"title": "部分",
+		"table": {
+			"position": "位置",
+			"type": "类型部分",
+			"name": "姓名",
+			"image": "图片",
+			"description": "说明"
+		}
+	},
+	"template": {
+		"title": "模版",
+		"buttonSave": "编辑",
+		"font": "字体",
+		"file": "file",
+		"deleteFileButton":"delete",
+		"siteTitle": "网站标题",
+		"logotype": "标志",
+		"deleteLogotypeButton": "删除标志",
+		"mainText": "主要文本",
+		"extraText": "额外文本",
+		"background": "背景",
+		"deleteBackgroundButton": "删除背景",
+		"overlay": "叠加效果设置",
+		"firstColor": "第一色",
+		"secondColor": "第二种颜色",
+		"angle": "角度",
+		"opacity": "不透明度",
+		"phone": "电话号码",
+		"socialMedia": "社交媒体",
+		"copyright": "版权"
+	},
+	"seo": {
+		"titlePage": "标题页",
+		"titlePlaceholder": "在这里输入标题",
+		"buttonSave": "编辑",
+		"metaKeywords": "页面关键词",
+		"metaKeywordsPlaceholder": "在这里输入关键字",
+		"metaKeywordsButton": "添加",
+		"MetaDescription": "页面描述"
+	},
+	"settings": {
+		"title": "设置",
+		"tabs": {
+			"templates": "模板",
+			"security": "安全",
+			"languages": "语言"
+		},
+		"templates": {
+			"selectTemplates": "选择一个模板",
+			"button": "编辑模板"
+		},
+		"security": {
+			"title": "更改登录名和密码",
+			"username": "登录名",
+			"newpassword": "新密码",
+			"newpasswordPlaceholder": "在这里输入新密码",
+			"confrimpassword": "确认密码",
+			"confrimpasswordPlaceholder": "在这里输入确认密码",
+			"button": "更新安全"
+		},
+		"languages": {
+			"selectLanguage":"选择一个语言"
+		}
+	},
+	"login": {
+		"title": "系统登录",
+		"username": "用户名",
+		"password": "密码",
+		"button": "登录"
+	}
+}

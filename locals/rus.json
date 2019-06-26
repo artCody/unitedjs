@@ -1,0 +1,114 @@
+{
+	"system": {
+		"ram": "Система использует",
+		"uptime": "В сети"
+	},
+	"nav": {
+	  "create": "Создать",
+	  "dashboard": "Панель",
+	  "sections": "Секции",
+	  "template": "Шаблон",
+	  "followers": "Подписчики",
+	  "seo": "SEO",
+	  "settings": "Настройки",
+	  "logout": "Выйти",
+	  "back": "Перейти на сайт"
+	},
+	"selectSection":{
+		"title": "Выберите секцию"
+	},
+	"section": {
+		"classic": {
+			"title": "Секция Classic",
+			"display": "Отображать",
+			"type": "Тип секции",
+			"sectionTitle": "Заголовок секции",
+			"position": "Позиция",
+			"image": "Картинка",
+			"text": "Текст",
+			"button": "Создать"
+		}
+	},
+	"dashboard": {
+		"title": "Панель",
+		"visits": "Посетители",
+		"activeSections": "Активные секции",
+		"createSectionBlock": {
+			"headline": "Создай свою секцию",
+			"paragraph": "Вы можите добавить новую секцию на ваш сайт",
+			"button": "Добавить секцию"
+		}
+	},
+	"sections": {
+		"title": "Секции",
+		"table": {
+			"position": "Позиция",
+			"type": "Тип",
+			"name": "Имя",
+			"image": "Картинка",
+			"description": "Описание"
+		}
+	},
+	"template": {
+		"title": "Шаблон",
+		"buttonSave": "Сохранить",
+		"font": "Шрифт",
+		"file": "Файл",
+		"deleteFileButton":"Удалить",
+		"siteTitle": "Заголовок",
+		"titlePlaceholder": "Заголовок сайта",
+		"logotype": "Логотип",
+		"deleteLogotypeButton": "Удалить логотип",
+		"mainText": "Основной текст",
+		"extraText": "Дополнительный текст",
+		"background": "Фон",
+		"deleteBackgroundButton": "Удалить фон",
+		"overlay": "Наложение",
+		"firstColor": "Первый цвет",
+		"secondColor": "Второй цвет",
+		"angle": "Угол",
+		"opacity": "Непрозрачность",
+		"phone": "Телефон",
+		"socialMedia": "Cоциальные медиа",
+		"copyright": "Авторское право"
+	},
+	"seo": {
+		"titlePage": "Заголовок",
+		"titlePlaceholder": "Заголовок страницы",
+		"buttonSave": "Сохранить",
+		"metaKeywords": "Мета ключевые слова",
+		"metaKeywordsPlaceholder": "Введите ключевое слово",
+		"metaKeywordsButton": "Добавить",
+		"MetaDescription": "Мета описание"
+	},
+	"settings": {
+		"title": "Настройки",
+		"tabs": {
+			"templates": "Шаблоны",
+			"security": "Безопасность",
+			"languages": "Языки"
+		},
+		"templates": {
+			"selectTemplates": "Выберите шаблон",
+			"button": "Редактировать шаблон"
+		},
+		"security": {
+			"title": "Изменить логин или пароль",
+			"username": "Имя пользователя",
+			"newpassword": "Новый пароль",
+			"newpasswordPlaceholder": "Введите новый пароль",
+			"confrimpassword": "Подтвердите новый пароль",
+			"confrimpasswordPlaceholder": "Подтвердите",
+			"button": "Обновить"
+		},
+		"languages": {
+			"selectLanguage":"Выберите язык"
+		}
+	},
+	"login": {
+		"title": "Авторизация",
+		"username": "Логин",
+		"password": "Пароль",
+		"button": "Войти"
+	}
+}

@@ -1,0 +1,115 @@
+{
+	"system": {
+		"ram": "System uses",
+		"uptime": "online system"
+	},
+	"nav": {
+	  "create": "Create",
+	  "dashboard": "Dashboard",
+	  "sections": "Sections",
+	  "template": "Template",
+	  "followers": "Followers",
+	  "seo": "SEO",
+	  "settings": "Settings",
+	  "logout": "Logout",
+	  "back": "back to website"
+	},
+	"selectSection":{
+		"title": "Select section"
+	},
+	"section": {
+		"classic": {
+			"title": "Classic section",
+			"display": "Display",
+			"type": "Section Type",
+			"sectionTitle": "Section title",
+			"position": "Position",
+			"image": "Image",
+			"text": "Text",
+			"button": "Create"
+		}
+	},
+	"dashboard": {
+		"title": "Dashboard",
+		"visits": "Visits",
+		"country": "Country",
+		"activeSections": "Active Secctions",
+		"createSectionBlock": {
+			"headline": "Create your sections",
+			"paragraph": "You can add new section to your website",
+			"button": "Create Section"
+		}
+	},
+	"sections": {
+		"title": "Sections",
+		"table": {
+			"position": "Position",
+			"type": "Type",
+			"name": "Name",
+			"image": "Image",
+			"description": "description"
+		}
+	},
+	"template": {
+		"title": "Template",
+		"buttonSave": "edit",
+		"font": "Font",
+		"file": "file",
+		"deleteFileButton":"delete",
+		"siteTitle": "Site title",
+		"titlePlaceholder": "enter site title here",
+		"logotype": "Logotype",
+		"deleteLogotypeButton": "Delete logotype",
+		"mainText": "Main text",
+		"extraText": "Extra text",
+		"background": "Background",
+		"deleteBackgroundButton": "Delete Background",
+		"overlay": "Overlay",
+		"firstColor": "First color",
+		"secondColor": "Second color",
+		"angle": "Angle",
+		"opacity": "Opacity",
+		"phone": "Phone",
+		"socialMedia": "Social media",
+		"copyright": "Copyright"
+	},
+	"seo": {
+		"titlePage": "Title",
+		"titlePlaceholder": "enter title here",
+		"buttonSave": "edit",
+		"metaKeywords": "Meta keywords",
+		"metaKeywordsPlaceholder": "Enter keywords here",
+		"metaKeywordsButton": "Add",
+		"MetaDescription": "Meta description"
+	},
+	"settings": {
+		"title": "Settings",
+		"tabs": {
+			"templates": "Templates",
+			"security": "Security",
+			"languages": "Languages"
+		},
+		"templates": {
+			"selectTemplates": "Select template",
+			"button": "Edit template"
+		},
+		"security": {
+			"title": "Change login and password",
+			"username": "username",
+			"newpassword": "new password",
+			"newpasswordPlaceholder": "Enter new password",
+			"confrimpassword": "confrim password",
+			"confrimpasswordPlaceholder": "Confrim",
+			"button": "Update"
+		},
+		"languages": {
+			"selectLanguage":"Select language"
+		}
+	},
+	"login": {
+		"title": "authorization",
+		"username": "username",
+		"password": "password",
+		"button": "Log in"
+	}
+}

@@ -1,0 +1,162 @@
+.tab-pannel {
+	background: #eeeeee;
+	height: 35px;
+	margin-bottom: 50px;
+}
+
+.tab-pannel li {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	float: left;
+	height: 100%;
+	padding: 0 18px;
+
+}
+
+.tab-active {
+	background: #fff;
+}
+
+
+.templates {
+	margin-top: 30px;
+	display: flex;
+}
+
+.template {
+	cursor: pointer;
+	display: flex;
+	margin-right: 15px;
+	width: 268px;
+	height: 200px;
+	background: #fbfbfb;
+	/* border: 1px solid rgb(218, 218, 218); */
+	border-radius: 5px;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.lang {
+	cursor: pointer;
+	display: flex;
+	margin-right: 15px;
+	width: 268px;
+	height: 200px;
+	background: #fbfbfb;
+	/* border: 1px solid rgb(218, 218, 218); */
+	border-radius: 5px;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.template img {
+	padding-bottom: 18px;
+}
+
+.template:last-child {
+	margin-right: 0;
+}
+
+
+.lang img {
+	padding-bottom: 18px;
+}
+
+.lang:last-child {
+	margin-right: 0;
+}
+
+.active-temp {
+	background: #398bce;
+	color: #fff;
+}
+
+.active-lang {
+	background: #398bce;
+	color: #fff;
+}
+
+.not-active {
+	cursor: default;
+	opacity: 0.5;
+	display: flex;
+	width: 268px;
+	height: 200px;
+	border: 1px solid rgb(218, 218, 218);
+	border-radius: 5px;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.btn-edit {
+	margin-top: 40px;
+	display: inline-block;
+	border-radius: 3px;
+	background-color: #15cd72;
+}
+
+.btn-edit a {
+	display: block;
+	font-size: 18px;
+	text-decoration: none;
+	color: #fff;
+	padding: 8px 45px;
+}
+
+.panel {
+	display: none;
+}
+
+.active {
+	display: block;
+}
+
+form {
+	display: flex;
+	flex-flow: column;
+	margin-top: 30px;
+}
+
+form .form-group {
+	font-size: 17px;
+	color: #454545;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.form-group input {
+	font-size: 17px;
+	padding: 11px;
+	border: 1px solid #f3f3f3;
+	outline: none;
+}
+
+.form-group .description {
+	width: 190px;
+	font-size: 17px;
+}
+
+.betwixt {
+	width: 100%;
+	height: 1px;
+	margin-bottom: 20px;
+	background-color: #f1f1f1;
+}
+
+
+.btn_login {
+	font-family: 'Karla', sans-serif;
+	cursor: pointer;
+	width: 180px;
+	font-size: 17px;
+	color: #ffffff;
+	background-color: #15cd72;
+	border-radius: 3px;
+	border: none;
+	padding: 10px;
+}

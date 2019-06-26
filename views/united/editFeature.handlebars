@@ -1,0 +1,55 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="/css/features.css">
+{{/section}}
+<div class="panel">
+	<ul>
+		<li id="saveCard" class="upgrade">edit</li>
+		<li><a href="/delete/{{items._id}}" id="delete">delete</a></li>
+	</ul>
+</div>
+
+<form class="preview" id="create-form">
+	{{#each items.cards}}
+	<div class='card' data-card="{{this.id}}">
+		<span class='cardDel'><i class='fas fa-times-circle'></i></span>
+		<label class='view-upload' style="background-image: url('/{{this.img.path}}');"><input type='file' name='img' class='login_input img' accept='image/*' id='img'>
+		</label>
+		<input type='text' placeholder='Headline' name='headline' class='headline' value="{{this.headline}}">
+		<div contentEditable='true' class='area'>{{this.text}}</div></div>
+	{{/each}}
+	<div class='blockcard'>
+
+		<div class="addCard" id="addCard"><i class="fas fa-plus-circle"></i></div>
+	</div>
+</form>
+<div class="betwixt"></div>
+<form class="params">
+	<input type="hidden" name="id" value="{{items._id}}">
+	<div class="form-group">
+		<span class="description">Display</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="display" id="display" value="{{items.status}}">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status">{{items.status}}</span>
+	</div>
+	<div class="form-group">
+		<label for="type" class="description">Section Type</label>
+		<input type="text" name="type" class="login_input" value="Features" id="type" disabled>
+	</div>
+	<div class="form-group">
+		<label for="position" class="description">Position</label>
+		<div class="form-position">
+		<input type="number" name="position" class="login_input quantity-num" value="{{items.position}}" id="position" readonly>
+			<div class="btn-position">
+				<span class="quantity-arrow-up"></span>
+  				<span class="quantity-arrow-down"></span>
+			</div>
+		</div>
+	</div>
+	
+</form>
+{{#section 'jquery'}}
+	<script src="/js/jquery-3.1.0.min.js"></script>
+	<script src="/js/editFeature.js"></script>
+{{/section}}

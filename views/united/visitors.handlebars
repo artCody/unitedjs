@@ -1,0 +1,33 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/sections.css">
+{{/section}}
+
+<h2>Visirors</h2>
+<table cellspacing="0" cellpadding="0" id="sections">
+	<thead>
+		<tr>
+			<th class="id"></th>
+			<th class="row">IP</th>
+			<th class="row">Country</th>
+			<th class="row">City</th>
+			<th class="row">Browser</th>
+			<th class="row">Date</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each visitors}}
+		<tr>
+			<td class="id"></td>
+			<td class="">{{this.ip}}</td>
+			<td class="">{{this.country}}</td>
+			<td class="">{{this.city}}</td>
+			<td class="">{{this.browser}}</td>
+			<td class="">{{this.date.time}}</td>
+		</tr>
+		{{/each}}
+	</tbody>
+</table>
+
+{{#section 'jquery'}}
+	<script src="/js/sections.js"></script>
+{{/section}}

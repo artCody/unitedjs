@@ -1,0 +1,104 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="/css/sandbox.css">
+{{/section}}
+<div class="loader"></div>
+<div class="panel">
+	<ul>
+		<li id="saveCard" class="upgrade">edit</li>
+		<li><a href="/delete/{{items._id}}" id="delete">delete</a></li>
+	</ul>
+</div>
+
+<div class="toolbar">
+	<ul class="character">
+		<li class="color-btn"><i class="fas fa-font font-color"></i><div class="color-box"></div></li>
+		<li><a href="#" data-command='bold'><i class="fas fa-bold"></i></a></li>
+		<li><a href="#" data-command='italic'><i class="fas fa-italic"></i></a></li>
+		<li><a href="#" data-command='underline'><i class="fas fa-underline underline"></i></a></li>
+		<li><a href="#"data-command='strikeThrough'><i class="fas fa-strikethrough"></i></a></li>
+	</ul>
+
+	<ul class="paragraph">
+		<li><a href="#" data-command='justifyRight'><i class="fas fa-align-right"></i></a></li>
+		<li><a href="#" data-command='justifyCenter'><i class="fas fa-align-center"></i></a></li>
+		<li><a href="#" data-command='justifyLeft'><i class="fas fa-align-left"></i></a></li>
+	</ul>
+
+	<ul class="links">
+		<li >
+			<a href="#" id="openWindow"><i class="fas fa-link"></i></a>
+		</li>
+		<li><a href="#" data-command='unlink'><i class="fas fa-unlink"></i></a></li>
+	</ul>
+
+	<ul class="others">
+		<li class="font-size" id="fontSize">
+			<i class="fas fa-font"></i>
+			<div class="dropdown-menu">
+				<a href="#" data-command="fontSize" class="font-btn" data-value="1" style="font-size: 10px">10px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="2" style="font-size: 13px">13px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="3" style="font-size: 16px">16px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="4" style="font-size: 18px">18px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="5" style="font-size: 24px">24px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="6" style="font-size: 32px">32px</a>
+				<a href="#" data-command="fontSize" class="font-btn" data-value="7" style="font-size: 48px">48px</a>
+			</div>
+		</li>
+		<li class="file-upload">
+			<form id="images">
+			<label id="view-upload">
+				<input type="file" name="img" class="login_input" accept="image/*" id="img">
+			</label>
+			</form>
+			<i class="far fa-image"></i>
+		</li>
+	</ul>
+</div>
+
+
+<div contenteditable="true" id="area" class="editor">{{{ items.textarea }}}</div>
+
+
+<form id="create-form">
+	<input type="hidden" name="id" value="{{items._id}}">
+	<div class="form-group size-control">
+		<div class="size-line">
+			<div class="large-line"></div>
+			<div class="medium-line"></div>
+			<div class="small-line"></div>
+		</div>
+		<input type="text" name="size" class="display-size" readonly value="{{items.size}}">
+	</div>
+	<div class="form-group">
+		<span class="description">Display</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="display" id="display" value="{{items.status}}">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status">{{items.status}}</span>
+	</div>
+	<div class="form-group">
+		<label for="type" class="description">Section Type</label>
+		<input type="text" name="type" class="login_input" value="Sandbox" id="type" disabled>
+	</div>
+	<div class="form-group">
+		<label for="position" class="description">Position</label>
+		<div class="form-position">
+		<input type="number" name="position" class="login_input quantity-num" value="{{items.position}}" id="position" readonly>
+			<div class="btn-position">
+				<span class="quantity-arrow-up"></span>
+				<span class="quantity-arrow-down"></span>
+			</div>
+		</div>
+	</div>
+</form>
+
+<div class="window-create-link">
+	<input type="text" id="urlLink" value="http://">
+	<div href="#" id="btn-link" class="btn-link">
+		<i class="fas fa-check"></i>
+	</div>
+</div>
+{{#section 'jquery'}}
+	<script src="/js/editSandbox.js"></script>
+{{/section}}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to United</title>
+	<link rel="stylesheet" href="/fontawesome/css/all.min.css">
+	
+	<link rel="stylesheet" href="css/united/login_style.css">
+	{{!-- <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> --}}
+	
+</head>
+<body>
+<div class="login">
+	<div class="login__inner">
+		{{!-- <header class="login__header">
+			<a href="/"><i class="fas fa-arrow-left"></i>Back To Home Screen</a>
+		</header> --}}
+		<div class="login__main">
+			<div class="login__brand"><div class="brand"><img src="img/logo.png" alt="" width="150" height="150"></div><div class="message" id="message"></div></div>
+			<div class="login__form">
+				<div class="ligin__form__title">{{local.login.title}}</div>
+				
+				<form id="login" action="/login" method="POST">
+					<div class="form-group">
+						<input type="text" name="username" class="login_input" placeholder="{{local.login.username}}" id="username">
+						<span class="symbol_input"><i class="fas fa-user"></i></span>
+					</div>
+					<div class="form-group">
+						<input type="password" name="password" class="login_input" placeholder="{{local.login.password}}" id="password">
+						<span class="symbol_input"><i class="fas fa-lock"></i></span>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn_login">{{local.login.button}}</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/login.js"></script>
+<script src="js/error.js"></script>
+</body>
+</html>

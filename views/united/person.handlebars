@@ -1,0 +1,73 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/person.css">
+{{/section}}
+
+<h2>Person section</h2>
+
+<div class="preview">
+	<img src="img/img2.svg" alt="" class="preview-img" id="preview-img">
+	<span class="preview-title" id="previewTitle">Steve Matteson</span>
+	<span class="preview-extra" id="previewExtra">Principal design</span>
+	<p class="preview-text" id="previewText">Steve is a typeface designer based in Louisville, Colorado, who manages a global team for Monotype. With over 25 years in the business, he has designed corporate faces for Android, Citrix, Microsoft, Nextel, and Xbox.
+	</p>
+</div>
+<div class="betwixt"></div>
+<form id="create-form">
+	<div class="form-group size-control">
+		<div class="size-line">
+			<div class="large-line"></div>
+			<div class="medium-line"></div>
+			<div class="small-line"></div>
+		</div>
+		<input type="text" name="size" class="display-size" readonly>
+	</div>
+	<div class="form-group">
+		<span class="description">Display</span>
+		<label class="switch" id="switch">
+			<input type="checkbox" name="display" id="display">
+			<span class="slider round"></span>
+		</label>
+		<span class="status" id="status">off</span>
+	</div>
+	<div class="form-group">
+		<label for="type" class="description">Section Type</label>
+		<input type="text" name="type" class="login_input" value="Person" id="type" disabled>
+	</div>
+	<div class="form-group">
+		<label for="title" class="description">Section title</label>
+		<input type="text" name="title" class="login_input" placeholder="Simply dummy Text" id="title">
+	</div>
+	<div class="form-group">
+		<label for="extra" class="description">Extra text</label>
+		<input type="text" name="extra" class="login_input" placeholder="Extra" id="extra">
+	</div>
+	<div class="form-group">
+		<label for="position" class="description">Position</label>
+		<div class="form-position">
+		<input type="number" name="position" class="login_input quantity-num" value="1" id="position" readonly>
+			<div class="btn-position">
+				<span class="quantity-arrow-up"></span>
+  				<span class="quantity-arrow-down"></span>
+			</div>
+		</div>
+	</div>
+	<div class="form-group">
+		<span class="description">Image</span>
+		<div class="file-upload">
+			<label id="view-upload">
+				<input type="file" name="img" class="login_input" accept="image/*" id="img">
+			</label>
+		</div>
+	</div>
+	<div class="form-group-textarea">
+		<label for="">Text</label>
+		<textarea name="textarea" id="textarea" cols="30" rows="10" class="text"></textarea>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn-save">Save</button>
+	</div>
+</form>
+{{#section 'jquery'}}
+	<script src="js/jquery-3.1.0.min.js"></script>
+	<script src="js/person.js"></script>
+{{/section}}

@@ -1,0 +1,83 @@
+{{#section 'head'}}
+	<link rel="stylesheet" href="css/followers.css">
+{{/section}}
+
+<h2>Followers</h2>
+
+<div class='panel-email'><span class='email'>{{email}}</span> <a href="/settings/secr" class='btn-follow'>edit mail</a></div>
+
+<ul class="tab-pannel">
+	<li rel="panel1" class="tab-active">emails</li>
+	<li rel="panel2">phones</li>
+	<li rel="panel3">send</li>
+</ul>
+
+
+
+<div id="panels">
+	<div class="panel active" id="panel1">
+
+
+	<table cellspacing="0" cellpadding="0" id="sections">
+		<thead>
+			<tr>
+				<th class="id"></th>
+				<th class="row">Name</th>
+				<th class="row">Email</th>
+				<th class="row">action</th>
+			</tr>
+		</thead>
+		<tbody class='tbody-email'>
+		</tbody>
+	</table>
+	</div>
+
+	<div class="panel" id="panel2">
+		<table cellspacing="0" cellpadding="0" id="sections">
+			<thead>
+				<tr>
+					<th class="id"></th>
+					<th class="row">Name</th>
+					<th class="row">Phone</th>
+					<th class="row">action</th>
+				</tr>
+			</thead>
+			<tbody class='tbody-phone'>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="panel" id="panel3">
+		<span id="sendEmail">Send</span>
+		<form id="send-email-form">
+			<div class="form-group">
+				<label for="emailpass" class="description">Email account password</label>
+				<input type="password" name="emailpass" class="login_input" placeholder="Email password" id='emailpass'>
+			</div>
+			<div class="form-group">
+				<label for="title" class="description">Subject</label>
+				<input type="text" name="title" class="login_input" placeholder="Simply dummy Text" id="title">
+			</div>
+			<div class="form-group-textarea">
+				<label for="">Text</label>
+				<textarea name="textarea" id="textarea" cols="30" rows="10" class="text" id='textarea'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam explicabo ab voluptatibus, officia, deleniti cumque at eum odit consectetur hic placeat eligendi neque excepturi fuga dolore aspernatur. Blanditiis, voluptates eos.</textarea>
+			</div>
+		</form>
+		<div class="preview">
+			<div class="header-overlay" style="background: {{settings.bgOverlay.firstColor}}">
+				<div class="container-mail">
+					<div class='phone' style="background: {{settings.bgOverlay.secondColor}}">Number: {{settings.phone}}</div>
+					<h1>{{settings.title}}</h1>
+					<p id='previewText'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam explicabo ab voluptatibus, officia, deleniti cumque at eum odit consectetur hic placeat eligendi neque excepturi fuga dolore aspernatur. Blanditiis, voluptates eos.</p>
+				</div>
+				<div class='copyright'>{{settings.copyright}}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{{#section 'jquery'}}
+	<script src="/js/socket.io.js"></script>
+
+	<script src='/js/followers.js'></script>
+{{/section}}

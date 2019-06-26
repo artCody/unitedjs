@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>UNITED</title>
+	<link rel="stylesheet" href="/css/main/vend-style.css">
+	<link rel="stylesheet" href="/css/main/vend-media.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+<header class="main-header">
+		<div class="top-header">
+			{{#if (eq settings.title '') }}
+				<img src="{{settings.logo}}" alt="" class="logo">
+				{{else}}
+				<div class="title">{{settings.title}}</div>
+			{{/if}}
+			<div class="top-header-right">
+				<nav class="main-nav" id="nav">
+					<ul>
+						{{#each items}} 
+							<li><a href="#{{this._id}}">{{this.title}}</a></li>
+						{{/each}}
+					</ul>
+				</nav>
+				<ul class="social">
+					<li><a href="{{settings.twitter}}"><img src="img/vend/834707-128.png" alt=""></a></li>
+					<li><a href="{{settings.instagram}}"><img src="img/vend/834708-128.png" alt=""></a></li>
+					<li><a href="{{settings.telegram}}"><img src="img/vend/834714-128.png" alt=""></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="middle-header">
+			<div class="prom-area" style="background-image: url({{settings.back}});">
+			</div>
+			<div class="middle-header-right">
+				<div class="inner-header-right">
+					<div class="title">{{settings.title}}</div>
+					<p>{{settings.maintext}}</p>
+					<form class="form" id="subscribe">
+						<input type="text" id="name" placeholder="Name">
+						<input type="text" id="email" placeholder="Email">
+						<button class="btn" type="submit">Subscribed</button>
+					</form>
+				</div>
+			</div>
+		</div>
+</header>
+<div class="sections">
+	{{{body}}}
+</div>
+<footer class="main-footer">
+	<div class="container">
+		<div class="inner-footer">
+			<div class="block-footer">
+				<div class="title">{{settings.title}}</div>
+				<p class="description-footer">{{settings.extratext}}</p>
+				<ul class="social social-footer">
+					<li><a href="{{settings.twitter}}"><img src="img/vend/834707-128.png" alt=""></a></li>
+					<li><a href="{{settings.instagram}}"><img src="img/vend/834708-128.png" alt=""></a></li>
+					<li><a href="{{settings.telegram}}"><img src="img/vend/834714-128.png" alt=""></a></li>
+				</ul>
+			</div>
+			<div class="block-footer">
+				<div class="inner-block-footer">
+					<span class="headline-footer">Addittional link</span>
+					<ul class="addittional-link">
+						{{#each items}} 
+							<li><a href="#{{this._id}}">{{this.title}}</a></li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>
+			<div class="block-footer">
+				<div class="inner-block-footer">
+					<span class="headline-footer">Contact info</span>
+					<p class="info-description-footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Wola sdkw amslda.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-footer">
+		<div class="copyright">
+			© {{settings.copyright}}. All rights reserved.
+		</div>
+	</div>
+</footer>
+<script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="/js/vend-united.js"></script>
+</body>
