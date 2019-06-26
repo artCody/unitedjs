@@ -1,6 +1,6 @@
 # unitedjs
 Specialized content management system for landing page
-[a http://unitedjs.ru/] Official site
+[Official site](http://unitedjs.ru/)
 
 Install
 
